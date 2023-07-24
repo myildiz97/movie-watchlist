@@ -1,0 +1,419 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #cad2c5;
+  color: #fff;
+  overflow-y: auto;
+}
+
+body, main {
+  min-height: 100vh;
+}
+
+.container {
+  width: 23.438rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header {
+  width: 23.438rem;
+  height: 25%;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+#cover-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+#cover-img h1, #cover-img a {
+  margin: 0;
+  padding: 5px;
+  color: #fff;
+  background-color: #000;
+  font-size: 1rem;
+}
+
+#cover-img a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+#movies-list {
+  height: 75%;
+  width: 100%;
+  color: #fff;
+}
+
+#movies-list .movie:first-of-type {
+  padding-top: 30px;
+}
+
+.movies-initial {
+  height: 100%;
+  width: 100%;
+  background-color: #001524;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.movies-initial p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.movies-initial a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #001524;
+  height: 100%;
+}
+
+.movie-container hr {
+  width: 50%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+
+.movie {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.movie-img img {
+  width: 7.5rem;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+.movie-title, .movie-imdb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-title {
+  gap: 10px;
+}
+
+.movie-name {
+  font-size: 1rem;
+}
+
+.movie-imdb {
+  gap: 3px;
+}
+
+.movie-rate {
+  padding-top: 2px;
+}
+
+.movie-rate, .movie-cont {
+  font-size: 0.8rem;
+}
+
+.movie-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.movie-cont span {
+  flex-basis: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.movie-cont span:first-of-type {
+  margin-right: auto;
+}
+
+.movie-cont button {
+  flex-basis: 50%;
+  background: none;
+  border: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  margin: 10px auto;
+  text-decoration: none;
+}
+
+.movie-cont button span {
+  padding-top: 2px;
+}
+
+.movie-cont button:hover {
+  color: red;
+}
+
+.movie-desc {
+  font-size: 0.8rem;
+  color: #ced4da;
+}
+
+.movies-loader {
+  height: 100%;
+  width: 100%;
+  background-color: #001524;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.movies-notFounded {
+  height: 100%;
+  width: 100%;
+  background-color: #001524;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies-notFounded h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media(min-width: 420px) {
+  .container, .header {
+    width: 26.25rem;
+  }
+  
+  .movie-img img {
+    width: 10rem;
+  }
+  
+  .movie-info {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .movie-cont {
+    gap: 10px;
+  }
+}
+
+@media(min-width: 550px) {
+  .container, .header {
+    width: 34.375rem;
+  }
+
+  #cover-img {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  #cover-img h1{
+    font-size: 1.2rem;
+  }
+  
+  #cover-img a {
+    font-size: 1rem;
+  }
+
+  #movies-list .movie:first-of-type {
+    padding-top: 50px;
+  }
+
+  .movie {
+    padding: 30px;
+    gap: 20px;
+  }
+  
+  .movie-img img {
+    width: 12.5rem;
+  }
+
+  .movie-info {
+    gap: 20px;
+  }
+  
+  .movie-name {
+    font-size: 1.2rem;
+  }
+  
+  .movie-imdb {
+    gap: 5px;
+  }
+
+  .movie-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .movie-cont span, .movie-cont button {
+    flex-basis: 0;
+  }
+  
+  .movie-rate, .movie-cont {
+    font-size: 1rem;
+  }
+
+  .movie-cont {
+    gap: 20px;
+  }
+  
+  .movie-desc {
+    font-size: 1rem;
+  }
+}
+
+@media(min-width: 720px) {
+  .container, .header {
+    width: 45rem;
+  }
+
+  #cover-img h1{
+    font-size: 1.4rem;
+  }
+  
+  #cover-img a {
+    font-size: 1.2rem;
+  }
+  
+  .movie {
+    padding: 50px;
+    gap: 30px;
+  }
+
+  .movie-img img {
+    width: 15rem;
+  }
+
+  .movie-info {
+    gap: 30px;
+  }
+
+  .movie-name {
+    font-size: 1.4rem;
+  }
+  
+  .movie-rate, .movie-cont {
+    font-size: 1.1rem;
+  }
+
+  .movie-cont {
+    gap: 30px;
+  }
+  
+  .movie-desc {
+    font-size: 1.1rem;
+  }
+}
+
+@media(min-width: 1080px) {
+  .container, .header {
+    width: 67.5rem;
+  }
+
+  #cover-img h1{
+    font-size: 1.8rem;
+  }
+  
+  #cover-img a {
+    font-size: 1.4rem;
+  }
+  
+  .movie {
+    padding: 50px;
+    gap: 30px;
+  }
+
+  .movie-img img {
+    width: 15rem;
+  }
+
+  .movie-info {
+    gap: 30px;
+  }
+
+  .movie-name {
+    font-size: 1.4rem;
+  }
+  
+  .movie-rate, .movie-cont {
+    font-size: 1.1rem;
+  }
+
+  .movie-cont {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .movie-cont span, .movie-cont button {
+    flex-basis: auto;
+  }
+  
+  .movie-desc, .movie-cont button {
+    font-size: 1.1rem;
+  }
+}
