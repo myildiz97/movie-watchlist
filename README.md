@@ -5,3 +5,4 @@
 - Remove movies from watchlist.
 
 # Preview
+https://movie-watchlist-myildiz97.netlify.app/
