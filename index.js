@@ -1,4 +1,4 @@
-const baseURL = "http://www.omdbapi.com/?apikey=cb4af09e&";
+const baseURL = "https://www.omdbapi.com/?apikey=cb4af09e&";
 let searching = "";
 const movieIds = [];
 
