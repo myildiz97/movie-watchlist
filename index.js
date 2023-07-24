@@ -222,4 +222,6 @@ if (document.getElementById("movies-list")) {
   `;
 };
 
-if (JSON.parse(localStorage.getItem("movieArr")).length > 0) setHtmlForList();
+if (JSON.parse(localStorage.getItem("movieArr"))) {
+  if (JSON.parse(localStorage.getItem("movieArr")).length > 0) setHtmlForList();
+}
